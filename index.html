@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerzie AI Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .status-pill {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .status-active { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .status-waiting { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+        .status-blocked { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-7xl mx-auto">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight text-white">Kerzie AI Mission Control</h1>
+                <p class="text-slate-400">System Status: <span class="text-green-400">Operational</span> • Last Update: Mar 7, 5:45 PM</p>
+            </div>
+            <div class="text-right">
+                <div class="text-sm text-slate-400">Jerry (Ops Manager)</div>
+                <div class="status-pill status-active mt-1">Direct Connection: Online</div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Column 1: Active Projects -->
+            <div class="space-y-6">
+                <h2 class="text-xl font-semibold flex items-center gap-2">
+                    <span class="w-2 h-6 bg-blue-500 rounded-full"></span>
+                    ACTIVE PROJECTS
+                </h2>
+                
+                <!-- Project Card: Silver Moon -->
+                <div class="glass-card p-5">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-lg text-blue-300">🌕 Silver Moon</h3>
+                        <span class="status-pill status-active">Active</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Voice/Community Agent (External Tracking)</p>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mb-2">
+                        <div class="bg-blue-500 h-1.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                    <div class="text-[10px] text-slate-500 flex justify-between">
+                        <span>Status: Manual Proof of Life</span>
+                        <span>85%</span>
+                    </div>
+                </div>
+
+                <!-- Project Card: Innovative Images -->
+                <div class="glass-card p-5">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-lg text-orange-300">📸 Innovative Images</h3>
+                        <span class="status-pill status-active">Active</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">SEO/AEO Battle Plan (External Tracking)</p>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mb-2">
+                        <div class="bg-orange-500 h-1.5 rounded-full" style="width: 50%"></div>
+                    </div>
+                    <div class="text-[10px] text-slate-500 flex justify-between">
+                        <span>Battle Plan Sent</span>
+                        <span>50%</span>
+                    </div>
+                </div>
+
+                <!-- Project Card: Unison / Scouts -->
+                <div class="glass-card p-5">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-lg text-purple-300">🛡️ Unison / Scouts</h3>
+                        <span class="status-pill status-waiting">Triage</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Biz Dev Engine / Scout Pipeline</p>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mb-2">
+                        <div class="bg-purple-500 h-1.5 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <div class="text-[10px] text-slate-500 flex justify-between">
+                        <span>Lead Generation Triage</span>
+                        <span>40%</span>
+                    </div>
+                </div>
+
+                <!-- Project Card: Putting is Simple -->
+                <div class="glass-card p-5">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-bold text-lg text-emerald-300">⛳ Putting is Simple</h3>
+                        <span class="status-pill status-active">Solo</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">"3-Putt Chronic" Recovery Strategy</p>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 mb-2">
+                        <div class="bg-emerald-500 h-1.5 rounded-full" style="width: 20%"></div>
+                    </div>
+                    <div class="text-[10px] text-slate-500 flex justify-between">
+                        <span>Asset Aggregation</span>
+                        <span>20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Action Required -->
+            <div class="space-y-6">
+                <h2 class="text-xl font-semibold flex items-center gap-2">
+                    <span class="w-2 h-6 bg-amber-500 rounded-full"></span>
+                    ACTION REQUIRED
+                </h2>
+
+                <div class="glass-card p-5 border-l-4 border-amber-500">
+                    <div class="text-xs font-bold text-amber-500 mb-1">WADE</div>
+                    <p class="text-sm text-white mb-2 italic">"Review the latest Newsletter Draft (v2 with trailer link)"</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-slate-700 px-2 py-1 rounded">Campaign: The AI Doc</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 border-l-4 border-amber-500">
+                    <div class="text-xs font-bold text-amber-500 mb-1">WADE / GAVIN</div>
+                    <p class="text-sm text-white mb-2 italic">"Provide Location IDs for Innovative Images & Silver Moon sub-accounts"</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-slate-700 px-2 py-1 rounded">GHL API Integration</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 border-l-4 border-slate-500 opacity-60">
+                    <div class="text-xs font-bold text-slate-400 mb-1">GAVIN</div>
+                    <p class="text-sm text-slate-300 mb-2 italic">"Verify transcription from Rob Whittet call (forwarded via email)"</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-slate-700 px-2 py-1 rounded">Scout Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Automation Queue -->
+            <div class="space-y-6">
+                <h2 class="text-xl font-semibold flex items-center gap-2">
+                    <span class="w-2 h-6 bg-red-500 rounded-full"></span>
+                    AUTOMATION QUEUE
+                </h2>
+
+                <div class="glass-card p-4 flex gap-4 items-center">
+                    <div class="w-10 h-10 bg-red-500/20 rounded flex items-center justify-center text-red-400 font-bold">1</div>
+                    <div>
+                        <div class="text-sm font-bold">GHL -> Drive Sync</div>
+                        <div class="text-[10px] text-slate-500">Auto-uploading call recaps to shared folders</div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 flex gap-4 items-center">
+                    <div class="w-10 h-10 bg-slate-800 rounded flex items-center justify-center text-slate-500 font-bold">2</div>
+                    <div>
+                        <div class="text-sm font-bold">Agency Zoom API</div>
+                        <div class="text-[10px] text-slate-500">Lead routing research for Rob Whittet</div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 flex gap-4 items-center">
+                    <div class="w-10 h-10 bg-slate-800 rounded flex items-center justify-center text-slate-500 font-bold">3</div>
+                    <div>
+                        <div class="text-sm font-bold">Scout Outreach Loop</div>
+                        <div class="text-[10px] text-slate-500">Regenerating GitHub Token (Due Mar 12)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
