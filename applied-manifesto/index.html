@@ -84,14 +84,32 @@
             border-left: 3px solid var(--blue);
             padding-left: 1.25rem;
         }
+        .hq-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--fg-muted);
+        }
+        .hq-badge svg {
+            width: 12px;
+            height: 12px;
+            color: var(--fg-muted);
+        }
     </style>
 </head>
 <body class="p-6 md:p-16">
     <div class="max-w-6xl mx-auto">
 
-        <!-- Logo -->
-        <div class="mb-12 md:mb-16">
+        <!-- Logo + HQ -->
+        <div class="mb-12 md:mb-16 flex items-center justify-between">
             <img src="https://storage.googleapis.com/msgsndr/Dg5W9eZap2oolpBTgwTZ/media/6948b098aca6ab2c5901f57a.png" alt="Kerzie AI" style="height: 36px; width: auto;">
+            <span class="hq-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                McKinney, TX
+            </span>
         </div>
 
         <!-- Hero Header -->
@@ -126,7 +144,7 @@
                     <div class="text-xs font-bold mb-1.5 flex items-center" style="color: var(--fg-mid);">
                         <span class="status-pulse"></span> APP STORE SUBMISSION
                     </div>
-                    <div class="text-xl font-extrabold tracking-tight" style="color: var(--blue);">WEEK OF MARCH 11</div>
+                    <div class="text-xl font-extrabold tracking-tight" style="color: var(--blue);">THIS WEEK</div>
                 </div>
             </div>
 
@@ -195,7 +213,7 @@
                         <span class="tag-pill" style="background: var(--blue-light); color: var(--blue);">The AI OS</span>
                     </div>
                     <p class="text-base leading-relaxed mb-8" style="color: var(--fg-mid);">
-                        The "Ship on the Horizon." Our 100% AI-native operating system designed to replace legacy tech debt for the next generation of small business.
+                        The "Ship on the Horizon." A 100% AI-native operating system designed to replace legacy tech debt for the next generation of small business.
                     </p>
                 </div>
                 <div class="flex justify-between items-end">
@@ -211,8 +229,8 @@
 
         </div>
 
-        <!-- The Native Argument -->
-        <section class="mt-24 md:mt-32 pt-16 md:pt-20 pb-20 md:pb-32" style="border-top: 1px solid var(--border);">
+        <!-- The Native Anchor -->
+        <section class="mt-24 md:mt-32 pt-16 md:pt-20" style="border-top: 1px solid var(--border);">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-extrabold mb-8 tracking-tight" style="color: var(--fg);">The Native Anchor</h2>
@@ -226,15 +244,47 @@
                     </div>
                 </div>
                 <div class="brand-card p-8 md:p-10" style="background: var(--blue-light); border-color: rgba(30,64,175,0.15);">
-                    <h4 class="font-bold text-xs uppercase tracking-widest mb-6" style="color: var(--blue);">The Ultimatum</h4>
+                    <h4 class="font-bold text-xs uppercase tracking-widest mb-6" style="color: var(--blue);">The Window</h4>
                     <p class="text-xl md:text-2xl font-extrabold mb-6 leading-tight" style="color: var(--fg);">
-                        Traditional government recruitment moves in fiscal years.<br/>AI moves in microseconds.
+                        Other cities are spending millions to recruit what McKinney already has.
                     </p>
                     <p class="text-sm mb-8 leading-relaxed" style="color: var(--fg-mid);">
-                        The ship is already in the harbor. Let's build the Command Center to scale the Hub today.
+                        The foundation is built. The products are live. The question isn't whether McKinney can become an AI hub — it's whether it recognizes it already is one.
                     </p>
                     <div class="font-extrabold text-lg" style="color: var(--blue);">Applied Intelligence. At Scale. Now.</div>
                 </div>
+            </div>
+        </section>
+
+        <!-- McKinney-based. Building locally. -->
+        <section class="mt-24 md:mt-32 pt-16 md:pt-20 pb-20 md:pb-32" style="border-top: 1px solid var(--border);">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-8 tracking-tight" style="color: var(--fg);">What a Native AI Company Brings</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                    <div class="brand-card p-6">
+                        <div class="text-2xl font-extrabold mb-1" style="color: var(--blue);">4</div>
+                        <div class="text-sm font-bold mb-2" style="color: var(--fg);">Products in Market</div>
+                        <p class="text-xs leading-relaxed" style="color: var(--fg-muted);">Consumer, SMB, healthcare, and local heritage — all built from McKinney.</p>
+                    </div>
+                    <div class="brand-card p-6">
+                        <div class="text-2xl font-extrabold mb-1" style="color: var(--green);">Local</div>
+                        <div class="text-sm font-bold mb-2" style="color: var(--fg);">SMB Revenue Protection</div>
+                        <p class="text-xs leading-relaxed" style="color: var(--fg-muted);">Unison directly strengthens McKinney small businesses by preventing lost revenue from missed communications.</p>
+                    </div>
+                    <div class="brand-card p-6">
+                        <div class="text-2xl font-extrabold mb-1" style="color: var(--indigo);">National</div>
+                        <div class="text-sm font-bold mb-2" style="color: var(--fg);">Scout Network</div>
+                        <p class="text-xs leading-relaxed" style="color: var(--fg-muted);">A growing sales force operating across the US — managed and scaled from McKinney HQ.</p>
+                    </div>
+                    <div class="brand-card p-6">
+                        <div class="text-2xl font-extrabold mb-1" style="color: var(--orange);">Main St</div>
+                        <div class="text-sm font-bold mb-2" style="color: var(--fg);">Heritage Modernization</div>
+                        <p class="text-xs leading-relaxed" style="color: var(--fg-muted);">Applying AI to revitalize a 30-year McKinney institution — proof that AI uplifts local business, not just tech.</p>
+                    </div>
+                </div>
+                <p class="mt-8 text-sm font-semibold" style="color: var(--fg-muted);">
+                    McKinney-based. Building locally.
+                </p>
             </div>
         </section>
 
