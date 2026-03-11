@@ -3,205 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McKinney AI: The Applied Manifesto</title>
+    <title>Kerzie AI: The Applied Manifesto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #F0D5C4;
+            --bg-light: #f8ece3;
+            --bg-card: #ffffff;
+            --fg: #0f172a;
+            --fg-mid: #334155;
+            --fg-muted: #64748b;
+            --blue: #1e40af;
+            --blue-light: #dbeafe;
+            --green: #059669;
+            --green-light: #d1fae5;
+            --indigo: #4f46e5;
+            --indigo-light: #e0e7ff;
+            --orange: #ea580c;
+            --orange-light: #fff7ed;
+            --sky: #0284c7;
+            --sky-light: #e0f2fe;
+            --border: rgba(0,0,0,0.08);
+            --shadow: 0 4px 24px rgba(15,23,42,0.06);
+            --shadow-hover: 0 12px 40px rgba(15,23,42,0.1);
+        }
         body {
-            background-color: #050505;
-            color: #ffffff;
-            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
-        .glow-text {
-            text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-        }
-        .glass-card {
-            background: rgba(15, 15, 15, 0.8);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.5rem;
+        .brand-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
-        .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px -10px rgba(56, 189, 248, 0.2);
+        .brand-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
         }
         .status-pulse {
             width: 8px;
             height: 8px;
-            background: #22c55e;
+            background: var(--green);
             border-radius: 50%;
             display: inline-block;
             margin-right: 8px;
-            box-shadow: 0 0 10px #22c55e;
+            box-shadow: 0 0 8px rgba(5, 150, 105, 0.5);
             animation: pulse 2s infinite;
         }
         @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
         }
-        .gradient-border {
+        .accent-border {
             position: relative;
-            background: #050505;
-            background-clip: padding-box;
-            border: 2px solid transparent;
+            border: 2px solid var(--blue);
         }
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            z-index: -1;
-            margin: -2px;
-            border-radius: inherit;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+        .hero-title {
+            color: var(--fg);
+            letter-spacing: -0.03em;
+        }
+        .tag-pill {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .quote-block {
+            border-left: 3px solid var(--blue);
+            padding-left: 1.25rem;
         }
     </style>
 </head>
-<body class="p-8 md:p-16">
+<body class="p-6 md:p-16">
     <div class="max-w-6xl mx-auto">
+
+        <!-- Logo -->
+        <div class="mb-12 md:mb-16">
+            <img src="https://storage.googleapis.com/msgsndr/Dg5W9eZap2oolpBTgwTZ/media/6948b098aca6ab2c5901f57a.png" alt="Kerzie AI" style="height: 36px; width: auto;">
+        </div>
+
         <!-- Hero Header -->
-        <header class="mb-20 text-center">
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-6 glow-text">
-                McKinney AI: <br/>The Applied Manifesto
+        <header class="mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 hero-title leading-[0.95]">
+                The Applied<br/>Manifesto
             </h1>
-            <p class="text-xl md:text-2xl text-slate-400 font-light max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl font-medium max-w-2xl" style="color: var(--fg-mid);">
                 Building the AI Hub of Texas through real-world execution, right here in McKinney.
             </p>
-            <div class="mt-8 inline-block px-6 py-2 border border-sky-500/30 rounded-full text-sky-400 text-sm tracking-widest uppercase bg-sky-500/5">
-                System Status: Operational • Speed of AI
+            <div class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold" style="background: var(--blue-light); color: var(--blue);">
+                <span class="status-pulse" style="margin-right: 4px;"></span>
+                System Status: Operational
             </div>
         </header>
 
         <!-- The Applied Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
             <!-- Zorli -->
-            <div class="glass-card p-8 flex flex-col justify-between">
+            <div class="brand-card p-7 flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-2xl font-bold tracking-tight">ZORLI</h3>
-                        <div class="text-[10px] tracking-widest text-sky-400 font-bold uppercase">Global Consumer</div>
+                    <div class="flex justify-between items-start mb-5">
+                        <h3 class="text-xl font-extrabold tracking-tight">ZORLI</h3>
+                        <span class="tag-pill" style="background: var(--sky-light); color: var(--sky);">Global Consumer</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    <p class="text-sm leading-relaxed mb-6" style="color: var(--fg-muted);">
                         The first global AI consumer application born in McKinney. Secure, intelligent vault and personal OS.
                     </p>
                 </div>
                 <div>
-                    <div class="text-xs font-bold mb-2 flex items-center">
+                    <div class="text-xs font-bold mb-1.5 flex items-center" style="color: var(--fg-mid);">
                         <span class="status-pulse"></span> APP STORE SUBMISSION
                     </div>
-                    <div class="text-2xl font-bold text-sky-400 tracking-tighter">WEEK OF MARCH 11</div>
+                    <div class="text-xl font-extrabold tracking-tight" style="color: var(--blue);">WEEK OF MARCH 11</div>
                 </div>
             </div>
 
             <!-- Unison -->
-            <div class="glass-card p-8 flex flex-col justify-between">
+            <div class="brand-card p-7 flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-2xl font-bold tracking-tight">UNISON</h3>
-                        <div class="text-[10px] tracking-widest text-emerald-400 font-bold uppercase">SMB Backbone</div>
+                    <div class="flex justify-between items-start mb-5">
+                        <h3 class="text-xl font-extrabold tracking-tight">UNISON</h3>
+                        <span class="tag-pill" style="background: var(--green-light); color: var(--green);">SMB Backbone</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    <p class="text-sm leading-relaxed mb-6" style="color: var(--fg-muted);">
                         Intelligent communication layer protecting local revenue. Scaling a national scout force from McKinney HQ.
                     </p>
                 </div>
                 <div>
-                    <div class="text-xs font-bold mb-2 flex items-center">
+                    <div class="text-xs font-bold mb-1.5 flex items-center" style="color: var(--fg-mid);">
                         <span class="status-pulse"></span> NATIONAL REACH
                     </div>
-                    <div class="text-lg font-bold text-emerald-400">Scaling Scouts Across US</div>
+                    <div class="text-lg font-extrabold" style="color: var(--green);">Scaling Scouts Across US</div>
                 </div>
             </div>
 
             <!-- Vitalis -->
-            <div class="glass-card p-8 flex flex-col justify-between">
+            <div class="brand-card p-7 flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-2xl font-bold tracking-tight">VITALIS</h3>
-                        <div class="text-[10px] tracking-widest text-indigo-400 font-bold uppercase">Clinical Intelligence</div>
+                    <div class="flex justify-between items-start mb-5">
+                        <h3 class="text-xl font-extrabold tracking-tight">VITALIS</h3>
+                        <span class="tag-pill" style="background: var(--indigo-light); color: var(--indigo);">Clinical Intelligence</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        HIPAA-compliant AI clinical backbone for the future of longevity medicine. 
+                    <p class="text-sm leading-relaxed mb-6" style="color: var(--fg-muted);">
+                        HIPAA-compliant AI clinical backbone for the future of longevity medicine.
                     </p>
                 </div>
                 <div>
-                    <div class="text-xs font-bold mb-2 flex items-center">
+                    <div class="text-xs font-bold mb-1.5 flex items-center" style="color: var(--fg-mid);">
                         <span class="status-pulse"></span> DEASON-LEVEL CARE
                     </div>
-                    <div class="text-lg font-bold text-indigo-400">Investor Pitch Live</div>
+                    <div class="text-lg font-extrabold" style="color: var(--indigo);">Investor Pitch Live</div>
                 </div>
             </div>
 
-            <!-- Innovative Images -->
-            <div class="glass-card p-8 flex flex-col justify-between">
+            <!-- Kurt Nelson -->
+            <div class="brand-card p-7 flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-2xl font-bold tracking-tight">KURT NELSON</h3>
-                        <div class="text-[10px] tracking-widest text-orange-400 font-bold uppercase">Heritage Play</div>
+                    <div class="flex justify-between items-start mb-5">
+                        <h3 class="text-xl font-extrabold tracking-tight">KURT NELSON</h3>
+                        <span class="tag-pill" style="background: var(--orange-light); color: var(--orange);">Heritage Play</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    <p class="text-sm leading-relaxed mb-6" style="color: var(--fg-muted);">
                         Modernizing a 30-year McKinney icon. Complete AI-driven GTM and SEO re-engineering.
                     </p>
                 </div>
                 <div>
-                    <div class="text-xs font-bold mb-2 flex items-center">
+                    <div class="text-xs font-bold mb-1.5 flex items-center" style="color: var(--fg-mid);">
                         <span class="status-pulse"></span> LOCAL IMPACT
                     </div>
-                    <div class="text-lg font-bold text-orange-400">Modernizing Main Street</div>
+                    <div class="text-lg font-extrabold" style="color: var(--orange);">Modernizing Main Street</div>
                 </div>
             </div>
 
             <!-- CORE -->
-            <div class="glass-card p-8 flex flex-col justify-between lg:col-span-2 gradient-border">
+            <div class="brand-card p-7 flex flex-col justify-between lg:col-span-2 accent-border">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-2xl font-bold tracking-tight">CORE</h3>
-                        <div class="text-[10px] tracking-widest text-sky-400 font-bold uppercase">The AI OS</div>
+                    <div class="flex justify-between items-start mb-5">
+                        <h3 class="text-xl font-extrabold tracking-tight">CORE</h3>
+                        <span class="tag-pill" style="background: var(--blue-light); color: var(--blue);">The AI OS</span>
                     </div>
-                    <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                    <p class="text-base leading-relaxed mb-8" style="color: var(--fg-mid);">
                         The "Ship on the Horizon." Our 100% AI-native operating system designed to replace legacy tech debt for the next generation of small business.
                     </p>
                 </div>
                 <div class="flex justify-between items-end">
                     <div>
-                        <div class="text-xs font-bold mb-2 flex items-center text-sky-400">
+                        <div class="text-xs font-bold mb-1.5" style="color: var(--blue);">
                             VISIONARY PHASE
                         </div>
-                        <div class="text-sm text-slate-500 font-mono tracking-widest uppercase">Target: The Harbor</div>
+                        <div class="text-sm font-mono tracking-widest uppercase" style="color: var(--fg-muted);">Target: The Harbor</div>
                     </div>
-                    <div class="text-slate-700 font-black text-6xl tracking-tighter opacity-20">2026</div>
+                    <div class="font-black text-6xl tracking-tighter" style="color: var(--fg); opacity: 0.06;">2026</div>
                 </div>
             </div>
 
         </div>
 
         <!-- The Native Argument -->
-        <section class="mt-32 border-t border-slate-800 pt-20 pb-40">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <section class="mt-24 md:mt-32 pt-16 md:pt-20 pb-20 md:pb-32" style="border-top: 1px solid var(--border);">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold mb-8 glow-text">The Native Anchor</h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-8 tracking-tight" style="color: var(--fg);">The Native Anchor</h2>
+                    <p class="text-base leading-relaxed mb-6" style="color: var(--fg-muted);">
                         We didn't move to McKinney for a grant. We started here because we are McKinney. From the era of Mayor Steve Bell to today's vision under Mayor Bill Cox, our roots are deep.
                     </p>
-                    <p class="text-slate-200 text-xl font-medium mb-10 italic">
-                        "While the world talks about AI, Kerzie AI is building it—right here in McKinney."
-                    </p>
+                    <div class="quote-block">
+                        <p class="text-lg md:text-xl font-semibold italic" style="color: var(--fg);">
+                            "While the world talks about AI, Kerzie AI is building it — right here in McKinney."
+                        </p>
+                    </div>
                 </div>
-                <div class="glass-card p-10 bg-sky-500/5 border-sky-500/20">
-                    <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6">The Ultimatum</h4>
-                    <p class="text-2xl font-bold mb-8 leading-tight">
-                        Traditional government recruitment moves in fiscal years. <br/>AI moves in microseconds. 
+                <div class="brand-card p-8 md:p-10" style="background: var(--blue-light); border-color: rgba(30,64,175,0.15);">
+                    <h4 class="font-bold text-xs uppercase tracking-widest mb-6" style="color: var(--blue);">The Ultimatum</h4>
+                    <p class="text-xl md:text-2xl font-extrabold mb-6 leading-tight" style="color: var(--fg);">
+                        Traditional government recruitment moves in fiscal years.<br/>AI moves in microseconds.
                     </p>
-                    <p class="text-slate-400 mb-8">
-                        The ship is already in the harbor. Let’s build the Command Center to scale the Hub today.
+                    <p class="text-sm mb-8 leading-relaxed" style="color: var(--fg-mid);">
+                        The ship is already in the harbor. Let's build the Command Center to scale the Hub today.
                     </p>
-                    <div class="font-bold text-white text-lg">Applied Intelligence. At Scale. Now.</div>
+                    <div class="font-extrabold text-lg" style="color: var(--blue);">Applied Intelligence. At Scale. Now.</div>
                 </div>
             </div>
         </section>
+
+        <!-- Footer -->
+        <div class="pb-8 text-center">
+            <img src="https://storage.googleapis.com/msgsndr/Dg5W9eZap2oolpBTgwTZ/media/6948b098aca6ab2c5901f57a.png" alt="Kerzie AI" style="height: 24px; width: auto; margin: 0 auto; opacity: 0.3;">
+        </div>
+
     </div>
 </body>
 </html>
