@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NemoClaw Targets | Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .table-header {
+            background: rgba(51, 65, 85, 0.5);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        tr { border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        tr:hover { background: rgba(255, 255, 255, 0.02); }
+        .tab-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        .tab-active {
+            background: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-full mx-auto">
+        <nav class="mb-8 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-blue-400 hover:text-blue-300 font-medium">← Back to Dashboard</a>
+                <h1 class="text-3xl font-bold">NemoClaw Target Acquisition</h1>
+            </div>
+            <div class="text-sm text-slate-400">
+                Last Refresh: Mar 15, 2026 11:35 AM CDT
+            </div>
+        </nav>
+
+        <div class="flex gap-4 mb-8">
+            <button class="tab-btn tab-active">CONSTRUCTION (DFW)</button>
+            <button class="tab-btn bg-slate-800 text-slate-400">LOGISTICS (DFW)</button>
+        </div>
+
+        <!-- Construction Table -->
+        <div class="glass-card overflow-hidden">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h2 class="text-xl font-semibold">Construction Sector (50-200 Employees)</h2>
+                <span class="text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-medium">Phase 1: Initial Mapping</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="p-4">Company</th>
+                            <th class="p-4">Size</th>
+                            <th class="p-4">Target Contact</th>
+                            <th class="p-4">Title</th>
+                            <th class="p-4">LinkedIn</th>
+                            <th class="p-4">Strategy</th>
+                            <th class="p-4">Open Jobs?</th>
+                            <th class="p-4">Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr>
+                            <td class="p-4 font-medium">Steele & Freeman Inc.</td>
+                            <td class="p-4 text-slate-400">89 Employees</td>
+                            <td class="p-4">Reilly Freeman</td>
+                            <td class="p-4">President</td>
+                            <td class="p-4"><a href="https://www.linkedin.com/company/steele-freeman-inc" class="text-blue-400 hover:underline">Profile</a></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Direct Email</span></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">Yes (Estimating)</span></td>
+                            <td class="p-4 text-yellow-400">Targeting Estimating Automation</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Rudick Construction Group</td>
+                            <td class="p-4 text-slate-400">~100 Employees</td>
+                            <td class="p-4">Clay Rudick</td>
+                            <td class="p-4">Owner / President</td>
+                            <td class="p-4"><a href="https://www.linkedin.com/company/rudickgroup" class="text-blue-400 hover:underline">Profile</a></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs">LinkedIn DM</span></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-slate-500/20 text-slate-400 rounded text-xs">None Detected</span></td>
+                            <td class="p-4 text-yellow-400">Targeting Project Coord AI</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Fort Construction</td>
+                            <td class="p-4 text-slate-400">~60 Employees</td>
+                            <td class="p-4">Scott Rose</td>
+                            <td class="p-4">CEO</td>
+                            <td class="p-4"><a href="https://www.linkedin.com/company/fort-construction" class="text-blue-400 hover:underline">Profile</a></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Direct Email</span></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">Yes (Project Asst)</span></td>
+                            <td class="p-4 text-yellow-400">Pending Outreach</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Logistics Table -->
+        <div class="glass-card mt-8 overflow-hidden">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h2 class="text-xl font-semibold">Logistics & Transportation (50-200 Employees)</h2>
+                <span class="text-sm bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-medium">Phase 1: Initial Mapping</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="p-4">Company</th>
+                            <th class="p-4">Size</th>
+                            <th class="p-4">Target Contact</th>
+                            <th class="p-4">Title</th>
+                            <th class="p-4">LinkedIn</th>
+                            <th class="p-4">Strategy</th>
+                            <th class="p-4">Open Jobs?</th>
+                            <th class="p-4">Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr>
+                            <td class="p-4 font-medium">Logisticorp Group</td>
+                            <td class="p-4 text-slate-400">~100 Employees</td>
+                            <td class="p-4">Roland Rivera</td>
+                            <td class="p-4">Sr. Director of Ops</td>
+                            <td class="p-4"><a href="https://www.linkedin.com/company/logisticorp-llc" class="text-blue-400 hover:underline">Profile</a></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Direct Email</span></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">Yes (Logistics Spec)</span></td>
+                            <td class="p-4 text-yellow-400">Exception Management Focus</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Bedrock Logistics</td>
+                            <td class="p-4 text-slate-400">~150 Employees</td>
+                            <td class="p-4">Liza Apolito</td>
+                            <td class="p-4">Operations Manager</td>
+                            <td class="p-4"><a href="https://www.linkedin.com/company/bedrock-logistics" class="text-blue-400 hover:underline">Profile</a></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs">LinkedIn DM</span></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">Yes (Multi-Dispatch)</span></td>
+                            <td class="p-4 text-yellow-400">Targeting Dispatch AI</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">DFW Movers & Erectors</td>
+                            <td class="p-4 text-slate-400">~120 Employees</td>
+                            <td class="p-4">Richard Johnson</td>
+                            <td class="p-4">Director of Ops</td>
+                            <td class="p-4"><a href="https://www.linkedin.com/company/dfw-movers-&-erectors-inc" class="text-blue-400 hover:underline">Profile</a></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs">Direct Email</span></td>
+                            <td class="p-4"><span class="px-2 py-1 bg-slate-500/20 text-slate-400 rounded text-xs">None Detected</span></td>
+                            <td class="p-4 text-yellow-400">Complex Logistics AI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
